@@ -1,5 +1,13 @@
-
 var invitationFrontSide=true;
+
+function oncreate()
+{	
+	var queryString = window.location.search;
+	console.log(queryString);
+	var urlParams = new URLSearchParams(queryString);
+	var name = urlParams.get('name');
+	document.getElementById("invitationName").innerHTML = desencriptar(name);
+}
 
 function mostrarFace2()
 {
@@ -30,4 +38,9 @@ function rotar()
 		document.getElementById("closeInvitation").style.transform = "rotate(0deg)";
 		invitationFrontSide=true;
 	}
+}
+
+function desencriptar(var nameText)
+{
+	return atob(nameText);
 }

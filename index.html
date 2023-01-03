@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<title>¡Estás invitado a nuestra boda!</title>
 	</head>
-	<body>
+	<body onload="oncreate()">
 		<div class="invitation">
 			<div id="closeInvitation" class="invitationSide">
 				<div class="front" id="frontCloseInvitation">
@@ -18,7 +18,7 @@
 				</div>
 				<div class="back" id="backCloseInvitation">				
 					<img src="img/CloseInvitationBack.png" id="Face1Back" class="center sombra" onclick="mostrarFace2()">
-					<h1 class = "centerText">Familia<br>Prueba<br>Prueba</h1>
+					<h1 id="invitationName" class = "centerText">Familia<br>Prueba<br>Prueba</h1>
 				</div>
 			</div>
 			<div id="openInvitation" class="invitationSide" style="display:none">
