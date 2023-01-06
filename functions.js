@@ -3,7 +3,6 @@ var invitationFrontSide=true;
 function oncreate()
 {	
 	var queryString = window.location.search;
-	console.log(queryString);
 	var urlParams = new URLSearchParams(queryString);
 	var name = urlParams.get('name');
 	document.getElementById("invitationName").innerHTML = desencriptar(name);
@@ -15,7 +14,6 @@ function mostrarFace2()
 	document.getElementById("btnGirar").style.display = "none";
 	document.getElementById("openInvitation").style.display = "block";
 	invitationIsClose=false;
-	console.log("MostrarFace2");
 }
 
 function mostrarFace1()
@@ -24,7 +22,6 @@ function mostrarFace1()
 	document.getElementById("btnGirar").style.display = "block";
 	document.getElementById("openInvitation").style.display = "none";
 	invitationIsClose=true;
-	console.log("MostrarFace1");
 }
 
 function rotar()
@@ -40,7 +37,7 @@ function rotar()
 	}
 }
 
-function desencriptar(var nameText)
+function desencriptar(nameText)
 {
 	return atob(nameText);
 }
