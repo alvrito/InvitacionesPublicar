@@ -8,6 +8,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
 		<title>¡Estás invitado a nuestra boda!</title>
 	</head>
 	<body onload="oncreate()">
@@ -23,7 +24,7 @@
 			</div>
 			<div id="openInvitation" class="invitationSide" style="display:none">
 				<div class="front">
-					<img src="img/Face2.png" id="Face2" class="center sombra" onclick="mostrarFace1()"/>
+					<img src="img/Face2.png" id="Face2" style="object-fit: contain;" class="center sombra img-fluid" onclick="mostrarFace1()"/>
 				</div>
 			</div>
 			<button class="btn" id="btnGirar" onclick="rotar()"></button>

@@ -3,9 +3,9 @@ var invitationFrontSide=true;
 function oncreate()
 {	
 	var queryString = window.location.search;
-	var urlParams = new URLSearchParams(queryString);
-	var name = urlParams.get('name');
-	document.getElementById("invitationName").innerHTML = desencriptar(name);
+	var url = new URL(document.URL);
+	var name = url.search.substring(6);
+	document.getElementById("invitationName").innerHTML = desencriptar(name);	
 }
 
 function mostrarFace2()
@@ -39,5 +39,7 @@ function rotar()
 
 function desencriptar(nameText)
 {
-	return atob(nameText);
+	return decodeURIComponent(atob(nameText).split('').map(function(c) {
+		return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+	}).join(''));
 }
